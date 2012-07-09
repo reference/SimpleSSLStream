@@ -15,6 +15,8 @@
 		8CC1168B15AB0CBE000A26C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC1168A15AB0CBE000A26C3 /* AppDelegate.m */; };
 		8CC1168E15AB0CBE000A26C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC1168D15AB0CBE000A26C3 /* ViewController.m */; };
 		8CC1169115AB0CBE000A26C3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC1168F15AB0CBE000A26C3 /* ViewController.xib */; };
+		8CC1169B15AB0D2F000A26C3 /* SSLStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC1169A15AB0D2F000A26C3 /* SSLStream.m */; };
+		8CC1169D15AB0D46000A26C3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC1169C15AB0D46000A26C3 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +24,18 @@
 		8CC1167A15AB0CBE000A26C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CC1167C15AB0CBE000A26C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8CC1167E15AB0CBE000A26C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8CC1168215AB0CBE000A26C3 /* SimpleSSLStream-Info.plist */ = {isa = PBXFileReference; path = "SimpleSSLStream-Info.plist"; sourceTree = "<group>"; };
+		8CC1168215AB0CBE000A26C3 /* SimpleSSLStream-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSSLStream-Info.plist"; sourceTree = "<group>"; };
 		8CC1168415AB0CBE000A26C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CC1168615AB0CBE000A26C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8CC1168815AB0CBE000A26C3 /* SimpleSSLStream-Prefix.pch */ = {isa = PBXFileReference; path = "SimpleSSLStream-Prefix.pch"; sourceTree = "<group>"; };
-		8CC1168915AB0CBE000A26C3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		8CC1168815AB0CBE000A26C3 /* SimpleSSLStream-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleSSLStream-Prefix.pch"; sourceTree = "<group>"; };
+		8CC1168915AB0CBE000A26C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8CC1168A15AB0CBE000A26C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8CC1168C15AB0CBE000A26C3 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		8CC1168C15AB0CBE000A26C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8CC1168D15AB0CBE000A26C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8CC1169015AB0CBE000A26C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		8CC1169915AB0D2F000A26C3 /* SSLStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLStream.h; sourceTree = "<group>"; };
+		8CC1169A15AB0D2F000A26C3 /* SSLStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLStream.m; sourceTree = "<group>"; };
+		8CC1169C15AB0D46000A26C3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC1169D15AB0D46000A26C3 /* CFNetwork.framework in Frameworks */,
 				8CC1167B15AB0CBE000A26C3 /* UIKit.framework in Frameworks */,
 				8CC1167D15AB0CBE000A26C3 /* Foundation.framework in Frameworks */,
 				8CC1167F15AB0CBE000A26C3 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +73,7 @@
 		8CC1167915AB0CBE000A26C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CC1169C15AB0D46000A26C3 /* CFNetwork.framework */,
 				8CC1167A15AB0CBE000A26C3 /* UIKit.framework */,
 				8CC1167C15AB0CBE000A26C3 /* Foundation.framework */,
 				8CC1167E15AB0CBE000A26C3 /* CoreGraphics.framework */,
@@ -77,6 +84,8 @@
 		8CC1168015AB0CBE000A26C3 /* SimpleSSLStream */ = {
 			isa = PBXGroup;
 			children = (
+				8CC1169915AB0D2F000A26C3 /* SSLStream.h */,
+				8CC1169A15AB0D2F000A26C3 /* SSLStream.m */,
 				8CC1168915AB0CBE000A26C3 /* AppDelegate.h */,
 				8CC1168A15AB0CBE000A26C3 /* AppDelegate.m */,
 				8CC1168C15AB0CBE000A26C3 /* ViewController.h */,
@@ -163,6 +172,7 @@
 				8CC1168715AB0CBE000A26C3 /* main.m in Sources */,
 				8CC1168B15AB0CBE000A26C3 /* AppDelegate.m in Sources */,
 				8CC1168E15AB0CBE000A26C3 /* ViewController.m in Sources */,
+				8CC1169B15AB0D2F000A26C3 /* SSLStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

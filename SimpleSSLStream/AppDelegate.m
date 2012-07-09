@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  SimpleSSLStream
 //
-//  Created by x coder on 7/9/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by sban@netspectrum.com on 7/9/12.
+//  Copyright (c) 2012 Netspectrum Inc. All rights reserved.
 //
 
 #import "AppDelegate.h"
