@@ -61,6 +61,9 @@
 }
 
 - (void)closeSSLStream{
+	
+    self.delegate = nil;
+    
     if (inputStream) {
         [inputStream close];
         [inputStream removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
