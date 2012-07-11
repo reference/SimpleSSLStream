@@ -87,6 +87,7 @@
 }
 
 - (void)closeSSLStream{
+
     _delegate = nil;
     
     if (inputStream) {
