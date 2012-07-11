@@ -23,7 +23,7 @@
 @property (assign)id<SSLStreamDelegate>delegate;
 
 - (id)initWithHost:(NSString*)host port:(int)port;
-- (void)sendString:(NSString*)str;
-- (void)sendData:(NSData*)data;
+- (int)sendString:(NSString*)str;
+- (int)sendData:(NSData*)data;
 - (void)closeSSLStream;
 @end

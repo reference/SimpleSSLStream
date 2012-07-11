@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C3DD81A15ABC60700E0637D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3DD81915ABC60700E0637D /* Icon.png */; };
+		8C3DD81C15ABC8F600E0637D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3DD81B15ABC8F600E0637D /* Default.png */; };
+		8C3DD81E15ABCD5200E0637D /* Snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3DD81D15ABCD5200E0637D /* Snow.png */; };
 		8CC1167B15AB0CBE000A26C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC1167A15AB0CBE000A26C3 /* UIKit.framework */; };
 		8CC1167D15AB0CBE000A26C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC1167C15AB0CBE000A26C3 /* Foundation.framework */; };
 		8CC1167F15AB0CBE000A26C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC1167E15AB0CBE000A26C3 /* CoreGraphics.framework */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C3DD81915ABC60700E0637D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8C3DD81B15ABC8F600E0637D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8C3DD81D15ABCD5200E0637D /* Snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snow.png; sourceTree = "<group>"; };
 		8CC1167615AB0CBE000A26C3 /* SimpleSSLStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSSLStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC1167A15AB0CBE000A26C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CC1167C15AB0CBE000A26C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,6 +105,9 @@
 		8CC1168115AB0CBE000A26C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C3DD81D15ABCD5200E0637D /* Snow.png */,
+				8C3DD81B15ABC8F600E0637D /* Default.png */,
+				8C3DD81915ABC60700E0637D /* Icon.png */,
 				8CC1168215AB0CBE000A26C3 /* SimpleSSLStream-Info.plist */,
 				8CC1168315AB0CBE000A26C3 /* InfoPlist.strings */,
 				8CC1168615AB0CBE000A26C3 /* main.m */,
@@ -159,6 +168,9 @@
 			files = (
 				8CC1168515AB0CBE000A26C3 /* InfoPlist.strings in Resources */,
 				8CC1169115AB0CBE000A26C3 /* ViewController.xib in Resources */,
+				8C3DD81A15ABC60700E0637D /* Icon.png in Resources */,
+				8C3DD81C15ABC8F600E0637D /* Default.png in Resources */,
+				8C3DD81E15ABCD5200E0637D /* Snow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +215,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yuji wei (9FGU8TH333)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -217,7 +230,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PROVISIONING_PROFILE = "F4CBDFB2-3E6E-4941-B220-F6C53C6864A7";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -227,6 +241,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yuji wei (9FGU8TH333)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -234,8 +249,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "F4CBDFB2-3E6E-4941-B220-F6C53C6864A7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -244,10 +260,15 @@
 		8CC1169515AB0CBE000A26C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: yuji wei (9FGU8TH333)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yuji wei (9FGU8TH333)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSSLStream/SimpleSSLStream-Prefix.pch";
 				INFOPLIST_FILE = "SimpleSSLStream/SimpleSSLStream-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F4CBDFB2-3E6E-4941-B220-F6C53C6864A7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F4CBDFB2-3E6E-4941-B220-F6C53C6864A7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -255,10 +276,15 @@
 		8CC1169615AB0CBE000A26C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: yuji wei (9FGU8TH333)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yuji wei (9FGU8TH333)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSSLStream/SimpleSSLStream-Prefix.pch";
 				INFOPLIST_FILE = "SimpleSSLStream/SimpleSSLStream-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F4CBDFB2-3E6E-4941-B220-F6C53C6864A7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F4CBDFB2-3E6E-4941-B220-F6C53C6864A7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -282,6 +308,7 @@
 				8CC1169615AB0CBE000A26C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

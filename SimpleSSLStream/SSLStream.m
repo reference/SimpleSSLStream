@@ -8,7 +8,7 @@
 #import "SSLStream.h"
 
 @implementation SSLStream
-@synthesize delegate;
+@synthesize delegate = _delegate;
 
 - (id)initWithHost:(NSString*)host port:(int)port{
     if (self = [super init]) {
@@ -45,22 +45,50 @@
     return self;
 }
 
-- (void)sendString:(NSString*)str{
+- (int)sendString:(NSString*)str{
     if (str && [str length] && outputStream) {
         NSString *endStr = [str stringByAppendingString:@"\n"];
         NSData *data = [NSData dataWithData:[endStr dataUsingEncoding:NSUTF8StringEncoding]];
         
-        [outputStream write:(const uint8_t *)[data bytes] maxLength:[data length]];
+        return [outputStream write:(const uint8_t *)[data bytes] maxLength:[data length]];
     }
+    
+    return -1;
 }
 
-- (void)sendData:(NSData*)data{
-    if (data && [data length] && outputStream) {
-        [outputStream write:(const uint8_t *)[data bytes] maxLength:[data length]];
+- (int)sendData:(NSData*)newData{
+    if (newData && [newData length] && outputStream) {
+        int index = 0;
+        int totalLen = [newData length];
+        uint8_t buffer[1024];
+        uint8_t *readBytes = (uint8_t *)[newData bytes];
+        
+        while (index < totalLen) {
+            if ([outputStream hasSpaceAvailable]) {
+                int indexLen =  (1024>(totalLen-index))?(totalLen-index):1024;
+                
+                (void)memcpy(buffer, readBytes, indexLen);
+                
+                int written = [outputStream write:buffer maxLength:indexLen];
+                
+                if (written < 0) {
+                    break;
+                }
+                
+                index += written;
+                
+                readBytes += written;
+            }
+        }
+        return index;
     }
+    
+    return -1;
 }
 
 - (void)closeSSLStream{
+    _delegate = nil;
+    
     if (inputStream) {
         [inputStream close];
         [inputStream removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -89,6 +117,8 @@
             
         case NSStreamEventHasBytesAvailable:
         {
+            NSLog(@"NSStreamEventHasBytesAvailable");
+            
             if (theStream == inputStream) {
 				uint8_t buffer[1024];
 				int len;
@@ -101,13 +131,13 @@
                     }
 				}
                 
-                if (self.delegate && [self.delegate respondsToSelector:@selector(SSLStream:didReceiveString:)]) {
+                if (_delegate && [_delegate respondsToSelector:@selector(SSLStream:didReceiveString:)]) {
                     NSString *output = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                    [self.delegate SSLStream:self didReceiveString:output];
+                    [_delegate SSLStream:self didReceiveString:output];
                 }
                 
-                if (self.delegate && [self.delegate respondsToSelector:@selector(SSLStream:didReceiveData:)]) {
-                    [self.delegate SSLStream:self didReceiveData:data];
+                if (_delegate && [_delegate respondsToSelector:@selector(SSLStream:didReceiveData:)]) {
+                    [_delegate SSLStream:self didReceiveData:data];
                 }
 			} else if (theStream == outputStream) {
                 NSLog(@"OutputStream has status NSStreamEventHasBytesAvailable");                

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "SSLStream.h"
-@interface ViewController : UIViewController<SSLStreamDelegate>
+
+#define PAYEE
+@interface ViewController : UIViewController<SSLStreamDelegate>{
+    NSMutableString *str1;
+    UITextField *channel;
+    SSLStream *stream;
+    
+    NSMutableData *mtData;
+    UIImageView *imgView;
+    UITextView *concol;
+}
 
 @end
