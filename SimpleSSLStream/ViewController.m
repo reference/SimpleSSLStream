@@ -31,7 +31,7 @@
     stream.delegate = self;
     
 #ifdef PAYEE
-    NSString *alloc_channel = [NSString stringWithFormat:@"protocol=%@&signature=%@&id=ios_%@&cmd=allocate_channel", @"flashme.communication.1.0", @"device-signature-001", @"23423489aslksldfj"];
+    NSString *alloc_channel = [NSString stringWithFormat:@"protocol=%@&signature=%@&id=ios_%@&cmd=xxxxx", @"fafsdfasfljafsa1.0", @"yyyyyy", @"23423489aslksldfj"];
     [stream sendString:alloc_channel];
     
     str1=[[NSMutableString alloc] initWithCapacity:0];
