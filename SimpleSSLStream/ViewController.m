@@ -2,8 +2,6 @@
 //  ViewController.m
 //  SimpleSSLStream
 //
-//  Created by sban@netspectrum.com on 7/9/12.
-//  Copyright (c) 2012 Netspectrum Inc. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -29,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    stream = [[SSLStream alloc] initWithHost:@"flash2pay.com" port:60001];
+    stream = [[SSLStream alloc] initWithHost:your host port:your port];
     stream.delegate = self;
     
 #ifdef PAYEE
